@@ -1,0 +1,22 @@
+.container {
+		margin: auto;
+		margin-top: 25px;
+		width: 550px;	
+		}
+
+.racer_table td {
+	  background-color: grey;
+	  height: 40px;
+	  width: 40px;
+	  text-align: center;
+		}
+
+.racer_table td.active {
+	  background-color: blue;
+		}
+
+.data_table {
+width: 720px;
+margin:auto;
+
+}

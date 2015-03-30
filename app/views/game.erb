@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1>Javascript Racer</h1>
+    <p>P1 = <%="#{@player1.name}"%> | Spam "Q" to move</p>
+    <p>P2 = <%="#{@player2.name}"%> | Spam "P" to move</p>
+  </div>
+
+  <div class="jumbotron">
+  	<div class="row">
+		<table class="racer_table">
+			<tr id="player1_row">
+				<td class="active">P1</td>
+			</tr>
+			<tr id="player2_row">
+				<td class="active">P2</td>
+			</tr>
+		</table>
+	</div>
+
+	<form action='/result' method='post' id="player1winsgame">
+  		<input type="hidden" name="playersgame[winner]" value="1">
+  	</form>
+
+  	<form action='/result' method='post' id="player2winsgame">
+  		<input type="hidden" name="playersgame[winner]" value="2">
+  	</form>
+
+
+  </div>
+
+  
+<!--   name for params
+  id for jquery -->
+
+</div> <!-- /container -->

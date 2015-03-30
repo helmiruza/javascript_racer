@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1>Javascript Racer</h1>
+    <p>P1 = <%="#{@player1.name}"%></p>
+    <p>P2 = <%="#{@player2.name}"%></p>
+    
+    <form action='/game' method='get'>
+      <button type="submit" class="btn btn-primary btn-lg">Start Game! &raquo;</button>
+    </form>
+
+  </div>
+</div> <!-- /container -->
+
+
+<div class="data_table">
+<table class="table table-hover">
+        <tr>
+          <th>Game</th>
+          <th>Participant #1</th>
+          <th>Participant #2</th>
+          <th>Winner</th>
+          <th>Sprint Time</th>
+        </tr>
+        <% if !@games.nil? %>
+        <% @games.each do |game|%>
+        <tr>
+          <td><p><%= game.id %></p></td>
+          <td><p><%= game.players_games.first.player.name %></p></td>
+          <td><p><%= game.players_games[1].player.name %></p></td>
+          <td><p><%= Player.find_by(id: game.players_games.first.winner).name %></p></td>
+          <td><p><%= game.time %></p></td>
+        </tr>
+        <% end %>
+        <% end %>
+        <tr>
+</table>
+</div>
